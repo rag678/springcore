@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
@@ -10,7 +8,9 @@
 
     <!--  this is our beans -->
     <bean class="com.springcore.Student" name="student1">
-        <property name="studentId" value="23222" />
+        <property name="studentId">
+            <value>22344</value>
+        </property>
         <property name="studentName">
             <value>Anurag</value>
         </property>
@@ -18,11 +18,21 @@
             <value>Lucknow</value>
         </property>
     </bean>
-<!--    second bean-->
-    <bean class="com.springcore.Student" name="student2" p:studentId="4535" p:studentName="nakul" p:studentAddress="mumba"/>
-<!--        <property name="studentId" value="23222" />-->
-<!--        <property name="studentName" value="Lal singh"/>-->
-<!--        <property name="studentAddress" value="Delhi"/>-->
+<!--    <bean class="com.springcore.Student" name="student1">-->
+<!--        <property name="studentId">-->
+<!--            <value>22344</value>-->
+<!--        </property>-->
+<!--        <property name="studentName">-->
+<!--            <value>John</value>-->
+<!--        </property>-->
+
+<!--        <property name="studentAddress">-->
+<!--            <value>-->
+<!--                Lucknow-->
+<!--            </value>-->
+<!--        </property>-->
+
+<!--    </bean>-->
 
 
 </beans>

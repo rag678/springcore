@@ -9,13 +9,15 @@ public class Test {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("lifecycleConfig.xml");
         //registering shut down hook
         context.registerShutdownHook();
-        Samosa s1 = (Samosa) context.getBean("s1");
-        System.out.println(s1);
-        //registering shut down hook
-        context.registerShutdownHook();
-
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++");
-        Object p1 = (Pepsi) context.getBean("p1");
-        System.out.println(p1);
+//        Samosa s1 = (Samosa) context.getBean("s1");
+//        System.out.println(s1);
+//        //registering shut down hook
+//        context.registerShutdownHook();
+//
+//        System.out.println("+++++++++++++++++++++++++++++++++++++++++");
+//        Object p1 = (Pepsi) context.getBean("p1");
+//        System.out.println(p1);
+        Example example = (Example)context.getBean("example");
+        System.out.println(example);
     }
 }

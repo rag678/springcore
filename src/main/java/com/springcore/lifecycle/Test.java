@@ -7,9 +7,15 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test {
     public static void main(String[] args) {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("lifecycleConfig.xml");
+        //registering shut down hook
+        context.registerShutdownHook();
         Samosa s1 = (Samosa) context.getBean("s1");
         System.out.println(s1);
         //registering shut down hook
         context.registerShutdownHook();
+
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++");
+        Object p1 = (Pepsi) context.getBean("p1");
+        System.out.println(p1);
     }
 }
